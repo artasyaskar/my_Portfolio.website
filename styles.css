@@ -12,19 +12,20 @@ header {
   background: 
     linear-gradient(to bottom, rgba(10, 10, 10, 0.1), rgba(5, 8, 6, 0.10)),
     url('images/background.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: contain; /* 👈 Shows full image */
+  background-position: top center; /* 👈 Moves image focus upward */
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 4rem 2rem;
   text-align: center;
   color: white;
-  min-height: 60vh;
+  min-height: 100vh; /* 👈 More vertical space to fit the full image */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
 
 /* New brightness adjustment for the background image */
 header::after {
