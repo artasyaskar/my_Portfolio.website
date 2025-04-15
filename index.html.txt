@@ -1,0 +1,67 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artas Yaskar | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <div class="hero">
+      <h1>Artas Yaskar</h1>
+      <h2>Writer | Translator | Web Learner</h2>
+      <button onclick="scrollToSection('about')">View My Work</button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate freelance writer and translator from Pakistan. I specialize in English–Urdu translation, SEO-focused copywriting, and beginner web development.
+      My goal is to deliver high-quality, human-centered content and build a strong portfolio that helps me grow as a professional.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      
+      <li>English–Urdu Translation</li>
+      <li>SEO Copywriting</li>
+      <li>Blog Writing</li>
+      <li>Basic Web Development</li>
+      <li>Proofreading & Editing</li>
+      <li>Programming languages like Python,C etc</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A beginner-friendly responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="project">
+      <h3>Translation Project</h3>
+      <p>Translated 10+ blog articles from English to Urdu for a health & wellness company.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: artasyaskar@example.com</p>
+    <p>Phone: <a href="tel:+923426386433">03426386433</a></p> <!-- Added phone number -->
+    <p>LinkedIn: linkedin.com/in/artasyaskar</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
