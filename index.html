@@ -3,65 +3,326 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artas Yaskar | Portfolio</title>
+  <meta name="description" content="Artas Yaskar - Professional Writer, Translator and Web Developer Portfolio">
+  <meta name="keywords" content="Artas Yaskar, Writer, Translator, Web Developer, Portfolio, Urdu, English">
+  <title>Artas Yaskar | Professional Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">AY</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <header>
+  <header id="home">
     <div class="hero">
       <h1>Artas Yaskar</h1>
-      <h2>Writer | Translator | Web Learner</h2>
-      <button onclick="scrollToSection('about')">View My Work</button>
+      <h2><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+      <p class="hero-description">Creating impactful content and translations that bridge languages and cultures</p>
+      <div class="cta-buttons">
+        <button onclick="scrollToSection('projects')" class="primary-btn">View Projects</button>
+        <button onclick="scrollToSection('contact')" class="secondary-btn">Contact Me</button>
+      </div>
     </div>
   </header>
-
+  
   <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate freelance writer and translator from Pakistan. I specialize in English–Urdu translation, SEO-focused copywriting, and beginner web development.
-      My goal is to deliver high-quality, human-centered content and build a strong portfolio that helps me grow as a professional.
-    </p>
+  <section id="about" class="about-section">
+    <div class="section-header">
+      <h2>About Me</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="images/profile.jpg" alt="Artas Yaskar" onerror="this.src='https://via.placeholder.com/300x300?text=Artas+Yaskar'">
+      </div>
+      <div class="about-text">
+        <p>
+          I am a passionate freelance writer and translator from Pakistan with expertise in English–Urdu translation, 
+          SEO-focused copywriting, and web development. With a keen eye for detail and a deep understanding of cultural nuances, 
+          I deliver content that resonates with diverse audiences.
+        </p>
+        <p>
+          My goal is to bridge language barriers and create meaningful connections through my work, 
+          whether it's through crafting compelling narratives, providing accurate translations, or developing 
+          user-friendly websites.
+        </p>
+        <div class="about-buttons">
+          <a href="#" class="btn download-cv">Download CV <i class="fas fa-download"></i></a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      
-      <li>English–Urdu Translation</li>
-      <li>SEO Copywriting</li>
-      <li>Blog Writing</li>
-      <li>Basic Web Development</li>
-      <li>Proofreading & Editing</li>
-      <li>Programming languages like Python,C etc</li>
-    </ul>
+  <section id="skills" class="skills-section">
+    <div class="section-header">
+      <h2>My Skills</h2>
+      <div class="underline"></div>
+    </div>
+    
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Language Services</h3>
+        <div class="skill-item">
+          <div class="skill-info">
+            <p>English–Urdu Translation</p>
+            <p>95%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 95%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <p>Proofreading & Editing</p>
+            <p>90%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Content Creation</h3>
+        <div class="skill-item">
+          <div class="skill-info">
+            <p>SEO Copywriting</p>
+            <p>85%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <p>Blog Writing</p>
+            <p>90%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Technical Skills</h3>
+        <div class="skill-item">
+          <div class="skill-info">
+            <p>Web Development</p>
+            <p>75%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info">
+            <p>Programming (Python, C)</p>
+            <p>70%</p>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>A beginner-friendly responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+  <section id="projects" class="projects-section">
+    <div class="section-header">
+      <h2>Recent Projects</h2>
+      <div class="underline"></div>
     </div>
 
-    <div class="project">
-      <h3>Translation Project</h3>
-      <p>Translated 10+ blog articles from English to Urdu for a health & wellness company.</p>
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="translation">Translation</button>
+      <button class="filter-btn" data-filter="writing">Writing</button>
+      <button class="filter-btn" data-filter="development">Development</button>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" data-category="development">
+        <div class="project-img">
+          <img src="images/portfolio.jpg" alt="Portfolio Website" onerror="this.src='https://via.placeholder.com/400x300?text=Portfolio+Website'">
+        </div>
+        <div class="project-info">
+          <h3>Personal Portfolio</h3>
+          <p>A responsive personal portfolio built with HTML, CSS, and JavaScript showcasing my skills and projects.</p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fas fa-link"></i> Live Demo</a>
+            <a href="#" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="translation">
+        <div class="project-img">
+          <img src="images/translation.jpg" alt="Translation Project" onerror="this.src='https://via.placeholder.com/400x300?text=Translation+Project'">
+        </div>
+        <div class="project-info">
+          <h3>Health & Wellness Blog Translations</h3>
+          <p>Translated 10+ in-depth articles from English to Urdu for a leading health and wellness company, maintaining cultural context and medical accuracy.</p>
+          <div class="project-tags">
+            <span>English-Urdu</span>
+            <span>Medical</span>
+            <span>SEO</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fas fa-link"></i> View Samples</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="writing">
+        <div class="project-img">
+          <img src="images/writing.jpg" alt="Content Writing Project" onerror="this.src='https://via.placeholder.com/400x300?text=Content+Writing'">
+        </div>
+        <div class="project-info">
+          <h3>SEO Content Creation</h3>
+          <p>Created SEO-optimized content for various clients, improving their search engine rankings and online visibility.</p>
+          <div class="project-tags">
+            <span>SEO</span>
+            <span>Blog Writing</span>
+            <span>Content Strategy</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fas fa-link"></i> View Samples</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-header">
+      <h2>Client Testimonials</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="testimonials-container">
+      <div class="testimonial">
+        <div class="testimonial-text">
+          <i class="fas fa-quote-left"></i>
+          <p>Artas delivered exceptional English to Urdu translations for our health blog. His attention to detail and understanding of medical terminology made our content accessible to a wider audience.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="images/client1.jpg" alt="Client" onerror="this.src='https://via.placeholder.com/80x80?text=Client'">
+          <div>
+            <h4>Sarah Johnson</h4>
+            <p>Content Manager, HealthPlus</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-text">
+          <i class="fas fa-quote-left"></i>
+          <p>Working with Artas on our website development project was a pleasure. He has a great eye for design and delivers clean, efficient code that exceeded our expectations.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="images/client2.jpg" alt="Client" onerror="this.src='https://via.placeholder.com/80x80?text=Client'">
+          <div>
+            <h4>Ahmed Khan</h4>
+            <p>Founder, TechStart</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: artasyaskar@example.com</p>
-    <p>Phone: <a href="tel:+923426386433">03426386433</a></p> <!-- Added phone number -->
-    <p>LinkedIn: linkedin.com/in/artasyaskar</p>
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>artasyaskar@example.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <p><a href="tel:+923426386433">+92 342 6386433</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Location</h3>
+            <p>Islamabad, Pakistan</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">AY</div>
+      <p>&copy; 2025 Artas Yaskar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
