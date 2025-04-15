@@ -10,8 +10,8 @@ body {
 
 header {
   background: 
-    linear-gradient(to bottom, rgba(15, 15, 15, 0.2), rgba(5, 5, 5, 0.5)),
-    url('https://i.postimg.cc/Qt4CX6gs/Whats-App-Image-2025-04-08-at-11-13-57-e95165de.jpg');
+    linear-gradient(to bottom, rgba(10, 10, 10, 0.1), rgba(5, 8, 6, 0.10)),
+    url('images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
