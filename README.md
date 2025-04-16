@@ -50,4 +50,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-Artas Yaskar - artasyaskar@example.com
+Artas Yaskar - artasyaskar@gmail.com
