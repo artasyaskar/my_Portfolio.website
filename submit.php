@@ -5,13 +5,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = htmlspecialchars(trim($_POST['subject']));
     $message = htmlspecialchars(trim($_POST['message']));
 
+    // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email address.";
         exit;
     }
 
     $to = "artasyaskar@gmail.com";
-    $headers = "From: $name <$email>\r\n";
+
+    // Use your email as sender, and user's email as reply-to
+    $headers = "From: Your Website <artasyaskar@gmail.com>\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
@@ -28,4 +31,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
