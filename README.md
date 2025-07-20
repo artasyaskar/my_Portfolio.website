@@ -1,53 +1,51 @@
-# Artas Yaskar - Professional Portfolio
+# My Portfolio Website
 
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript to showcase skills, projects, and testimonials.
 
 ## Features
 
-- Responsive design that works on all devices
-- Modern UI with smooth animations and transitions
-- Interactive elements like project filtering
-- Contact form
-- Dynamic content sections
-- Mobile-friendly navigation
+-   **Modern Design:** A clean and professional design that looks great on all devices.
+-   **Responsive:** The website is fully responsive and works on all screen sizes.
+-   **Dynamic:** The website uses JavaScript to create a dynamic and interactive user experience.
+-   **Serverless Contact Form:** The contact form is powered by a serverless function that can be deployed on Vercel.
 
-## Technologies Used
+## Getting Started
 
-- HTML5
-- CSS3 (with Flexbox and Grid)
-- JavaScript (ES6+)
-- Font Awesome Icons
-- Google Fonts
-- Typed.js for text animations
+To get a local copy up and running follow these simple steps.
 
-## Setup Instructions
+### Prerequisites
 
-1. Clone or download this repository
-2. Open `index.html` in your web browser
-3. To make changes:
-   - Edit `index.html` for content changes
-   - Update `styles.css` for styling changes
-   - Modify `script.js` for functionality updates
+You will need to have [Node.js](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) installed on your machine.
 
-## Image Requirements
+### Installation
 
-For the best experience, add the following images to the `images` folder:
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/artasyaskar/my_Portfolio.website.git
+    ```
+2.  Install NPM packages
+    ```sh
+    npm install
+    ```
 
-- `hero-bg.jpg`: Background image for the hero section (1920x1080 recommended)
-- `profile.jpg`: Your profile picture (at least 600x600 recommended)
-- `portfolio.jpg`, `translation.jpg`, `writing.jpg`: Project images (800x600 recommended)
-- `client1.jpg`, `client2.jpg`: Client/testimonial avatars (at least 150x150 recommended)
+### Usage
 
-## Customization
+To run the project locally, run the following command:
 
-- Update personal information in `index.html`
-- Change color scheme by modifying CSS variables in `styles.css`
-- Add your own projects and skills
+```sh
+npm run dev
+```
 
-## License
+This will start a development server at `http://localhost:3000`.
 
-This project is open source and available under the [MIT License](LICENSE).
+To build the project for production, run the following command:
 
-## Contact
+```sh
+npm run build
+```
 
-Artas Yaskar - artasyaskar@gmail.com
+This will create a `dist` directory with the production-ready files.
+
+## Deployment
+
+This project is configured for deployment on [Vercel](https://vercel.com/). To deploy the project, simply connect your GitHub account to Vercel and import the project. Vercel will automatically detect the build settings and deploy the project.
