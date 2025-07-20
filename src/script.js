@@ -55,10 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterValue = this.getAttribute('data-filter');
 
             projectCards.forEach(card => {
-                if (filterValue === 'all') {
-                    card.style.display = 'block';
-                } else if (card.getAttribute('data-category') === filterValue) {
-                    card.style.display = 'block';
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
                 }
