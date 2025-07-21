@@ -6,15 +6,13 @@
 }
 
 .about-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
   align-items: center;
-  gap: 4rem;
-  position: relative;
-  z-index: 1;
+  gap: 5rem;
 }
 
 .about-image {
-  flex: 1;
   position: relative;
 }
 
@@ -23,11 +21,16 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 5px solid var(--primary-color);
+  border: 4px solid var(--primary-color);
   border-radius: var(--border-radius);
-  top: 20px;
-  left: 20px;
-  z-index: -1;
+  top: -20px;
+  left: -20px;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.about-image:hover::before {
+    transform: translate(10px, 10px);
 }
 
 .about-image img {
@@ -35,6 +38,7 @@
   box-shadow: var(--box-shadow);
   transition: var(--transition);
   position: relative;
+  z-index: 1;
 }
 
 .about-image img:hover {
