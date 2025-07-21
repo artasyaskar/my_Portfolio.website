@@ -1,16 +1,16 @@
 /* Global Styles */
 :root {
-  --primary-color: #8B4513; /* saddle brown */
-  --secondary-color: #A0522D; /* sienna */
-  --dark-color: #121212; /* very dark gray */
-  --light-color: #2c2c2c; /* a gray for backgrounds */
-  --text-color: #ffffff; /* white text color */
-  --bg-color: #1c1c1c; /* dark background */
-  --section-padding: 5rem 2rem;
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --border-radius: 8px;
-  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  --box-shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.4);
+  --primary-color: #9f7b6d; /* A more subtle, modern brown */
+  --secondary-color: #c5a690; /* A lighter accent color */
+  --dark-color: #1a1a1a; /* A slightly softer dark tone */
+  --light-color: #2f2f2f; /* A lighter gray for depth */
+  --text-color: #f0f0f0; /* A softer white */
+  --bg-color: #121212; /* A deep, rich black */
+  --section-padding: 6rem 2rem;
+  --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --border-radius: 12px; /* A more rounded, modern look */
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  --box-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 * {
