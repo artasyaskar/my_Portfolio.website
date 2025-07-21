@@ -6,7 +6,11 @@
   <meta name="description" content="Artas Yaskar - Professional Writer, Translator and Web Developer Portfolio">
   <meta name="keywords" content="Artas Yaskar, Writer, Translator, Web Developer, Portfolio, Urdu, English">
   <title>Artas Yaskar | Professional Portfolio</title>
-  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- ✅ Use absolute path for styles (Vite expects /src/...) -->
+  <link rel="stylesheet" href="/src/styles.css" />
+
+  <!-- Fonts and Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -338,6 +342,6 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-  <script src="./script.js" type="module"></script>
+  <script type="module" src="/src/script.js"></script>
 </body>
 </html>
