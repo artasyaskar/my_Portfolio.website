@@ -1,27 +1,27 @@
 /* Contact Section */
 .contact-section {
-  background-color: var(--light-color);
+  background-color: var(--bg-color);
   position: relative;
 }
 
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
+  gap: 5rem;
+  background: var(--light-color);
+  padding: 4rem;
+  border-radius: var(--border-radius);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .contact-container {
     grid-template-columns: 1fr;
+    padding: 2.5rem;
   }
 }
 
 .contact-info {
-  background: #2c2c2c;
-  padding: 3rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
+  padding: 0;
 }
 
 .contact-info:hover {
