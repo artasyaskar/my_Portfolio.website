@@ -1,248 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Artas Yaskar</title>
-
-  <!-- ✅ Correct Vite paths -->
-  <link rel="stylesheet" href="/src/styles.css" />
-  <link rel="stylesheet" href="/src/styles/projects.css" />
-
-  <!-- Fonts and Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Artas Yaskar</title>
+    <link rel="icon" type="image/x-icon" href="/src/images/profile.jpg">
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <section id="projects" class="projects-section">
-    <div class="section-header">
-      <h2>Recent Projects</h2>
-      <div class="underline"></div>
-    </div>
+    <nav class="navbar">
+        <div class="logo">AY</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 
-    <div class="projects-filter">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="ai">AI</button>
-      <button class="filter-btn" data-filter="devops">DevOps</button>
-      <button class="filter-btn" data-filter="game">Game</button>
-      <button class="filter-btn" data-filter="portfolio">Portfolio</button>
-      <button class="filter-btn" data-filter="web">Web</button>
-      <button class="filter-btn" data-filter="mobile">Mobile</button>
-      <button class="filter-btn" data-filter="hardware">Hardware</button>
-      <button class="filter-btn" data-filter="dsa">DSA</button>
-    </div>
+    <header id="projects-hero" class="projects-hero-section">
+        <div class="hero-content">
+            <h1>My Work</h1>
+            <p>A collection of projects that showcase my skills and passion.</p>
+        </div>
+    </header>
 
-    <div class="projects-grid">
-      <div class="project-card" data-category="web">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=cli-arena-web-nextjs" alt="cli-arena-web-nextjs">
+    <main id="projects-main" class="projects-main-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- All Projects will be dynamically loaded here or listed statically -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/src/images/portfolio.jpg" alt="CLI-Arena">
+                    </div>
+                    <div class="project-info">
+                        <h3>CLI-Arena</h3>
+                        <p>Browser-based command-line simulation in Next.js to test shell logic visually. Built with Docker + ShadCN + Tailwind.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/src/images/translation.jpg" alt="Bible Summarizer API">
+                    </div>
+                    <div class="project-info">
+                        <h3>Bible Summarizer API</h3>
+                        <p>Fetch any verse (KJV), get historical context and spiritual insights. Powered by Python, FastAPI, and blurring for prophet images.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/src/images/writing.jpeg" alt="Physics vs AI - Project Rhino">
+                    </div>
+                    <div class="project-info">
+                        <h3>Physics vs AI - Project Rhino</h3>
+                        <p>Designed high-school physics MCQs with diagram-based logic so hard that it tricks GPT models at least twice out of four attempts.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/src/images/client2.jpg" alt="Mobile CLI Simulator">
+                    </div>
+                    <div class="project-info">
+                        <h3>Mobile CLI Simulator</h3>
+                        <p>Expo-based terminal runner. Builds and serves simulated Linux interface in React Native with custom task validations.</p>
+                    </div>
+                </div>
+                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="/src/images/client1.webp" alt="Project Five">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Five</h3>
+                        <p>Description of project five.</p>
+                    </div>
+                </div>
+                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="/src/images/background.jpg" alt="Project Six">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Six</h3>
+                        <p>Description of project six.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-info">
-          <h3>cli-arena-web-nextjs</h3>
-          <p>A browser-based terminal environment built using Next.js.</p>
-          <div class="project-tags">
-            <span>Next.js</span>
-            <span>React</span>
-            <span>TypeScript</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="web">Web</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/cli-arena-web-nextjs" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
+    </main>
 
-      <div class="project-card" data-category="mobile">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=cli-arena-mobile-expo" alt="cli-arena-mobile-expo">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">AY</div>
+            <p>&copy; 2025 Artas Yaskar. Built by hand, fueled by faith.</p>
         </div>
-        <div class="project-info">
-          <h3>cli-arena-mobile-expo</h3>
-          <p>A mobile CLI experience built with React Native and Expo.</p>
-          <div class="project-tags">
-            <span>React Native</span>
-            <span>Expo</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/cli-arena-mobile-expo" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
+    </footer>
 
-      <div class="project-card" data-category="ai">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=cli-arena-ml-fastapi" alt="cli-arena-ml-fastapi">
-        </div>
-        <div class="project-info">
-          <h3>cli-arena-ml-fastapi</h3>
-          <p>A FastAPI backend that integrates machine learning inside a CLI simulator.</p>
-          <div class="project-tags">
-            <span>FastAPI</span>
-            <span>Python</span>
-            <span>Machine Learning</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="ai">AI</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/cli-arena-ml-fastapi" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="game">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=cli-arena-gamedev-unity" alt="cli-arena-gamedev-unity">
-        </div>
-        <div class="project-info">
-          <h3>cli-arena-gamedev-unity</h3>
-          <p>Game simulation interface using Unity for CLI training gamification.</p>
-          <div class="project-tags">
-            <span>Unity</span>
-            <span>C#</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="game">Game</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/cli-arena-gamedev-unity" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="ai">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=bible-summarizer-api" alt="bible-summarizer-api">
-        </div>
-        <div class="project-info">
-          <h3>bible-summarizer-api</h3>
-          <p>AI-powered Bible summarization tool using Python + FastAPI.</p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>FastAPI</span>
-            <span>AI</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="ai">AI</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/bible-summarizer-api" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="devops">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=cyberwatch" alt="cyberwatch">
-        </div>
-        <div class="project-info">
-          <h3>cyberwatch</h3>
-          <p>Python CLI for lightweight cybersecurity log scanning.</p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>CLI</span>
-            <span>Cybersecurity</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="devops">DevOps</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/cyberwatch" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="game">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=3D_DinoGame" alt="3D_DinoGame">
-        </div>
-        <div class="project-info">
-          <h3>3D_DinoGame</h3>
-          <p>JavaScript-based 3D dinosaur endless runner game.</p>
-          <div class="project-tags">
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="game">Game</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/3D_DinoGame" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="ai">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=Handsign-Detection_Project" alt="Handsign-Detection_Project">
-        </div>
-        <div class="project-info">
-          <h3>Handsign-Detection_Project</h3>
-          <p>JS-based computer vision app for hand gesture recognition.</p>
-          <div class="project-tags">
-            <span>JavaScript</span>
-            <span>Computer Vision</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="ai">AI</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/Handsign-Detection_Project" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="hardware">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=DSD-lab-2023" alt="DSD-lab-2023">
-        </div>
-        <div class="project-info">
-          <h3>DSD-lab-2023</h3>
-          <p>Digital Systems Design lab work in SystemVerilog.</p>
-          <div class="project-tags">
-            <span>SystemVerilog</span>
-            <span>Hardware</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="hardware">Hardware</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/DSD-lab-2023" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card" data-category="dsa">
-        <div class="project-img">
-          <img src="https://via.placeholder.com/400x300?text=DSA-Lab" alt="DSA-Lab">
-        </div>
-        <div class="project-info">
-          <h3>DSA-Lab</h3>
-          <p>Data Structures & Algorithms coursework repo.</p>
-          <div class="project-tags">
-            <span>C++</span>
-            <span>Data Structures</span>
-            <span>Algorithms</span>
-          </div>
-          <div class="project-category">
-            <button class="filter-btn" data-filter="dsa">DSA</button>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/artasyaskar/DSA-Lab" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script type="module" src="/src/script.js"></script>
+    <script type="module" src="/src/script.js"></script>
 </body>
 </html>
