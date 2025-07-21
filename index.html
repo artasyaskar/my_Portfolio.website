@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artas Yaskar | Electrical Engineer & Tech Creator</title>
-
+  <link rel="icon" type="image/x-icon" href="/src/images/profile.jpg">
   <link rel="stylesheet" href="/src/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -45,7 +45,7 @@
     </div>
     <div class="about-content">
       <div class="about-image">
-        <img src="../images/profile.jpg" alt="Artas Yaskar" onerror="this.src='https://via.placeholder.com/300x300?text=Artas+Yaskar'">
+        <img src="/src/images/profile.jpg" alt="Artas Yaskar">
       </div>
       <div class="about-text">
         <p>
@@ -58,7 +58,7 @@
           My tech journey is rooted in faith and fueled by ambition. Whether it’s controlling a servo with a PID loop or shaping user interfaces for mobile platforms with Expo, I aim to grow in every idea I pursue.
         </p>
         <div class="about-buttons">
-          <a href="../assets/myresume.pdf" download="Artas_Yaskar_CV.pdf" class="btn download-cv">
+          <a href="/src/assets/my__Resume.pdf" download="Artas_Yaskar_CV.pdf" class="btn download-cv">
             Download CV <i class="fas fa-download"></i>
           </a>
         </div>
@@ -102,26 +102,46 @@
     </div>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>CLI-Arena</h3>
-        <p>Browser-based command-line simulation in Next.js to test shell logic visually. Built with Docker + ShadCN + Tailwind.</p>
+        <div class="project-img">
+          <img src="/src/images/portfolio.jpg" alt="CLI-Arena">
+        </div>
+        <div class="project-info">
+          <h3>CLI-Arena</h3>
+          <p>Browser-based command-line simulation in Next.js to test shell logic visually. Built with Docker + ShadCN + Tailwind.</p>
+        </div>
       </div>
 
       <div class="project-card">
-        <h3>Bible Summarizer API</h3>
-        <p>Fetch any verse (KJV), get historical context and spiritual insights. Powered by Python, FastAPI, and blurring for prophet images.</p>
+        <div class="project-img">
+          <img src="/src/images/translation.jpg" alt="Bible Summarizer API">
+        </div>
+        <div class="project-info">
+          <h3>Bible Summarizer API</h3>
+          <p>Fetch any verse (KJV), get historical context and spiritual insights. Powered by Python, FastAPI, and blurring for prophet images.</p>
+        </div>
       </div>
 
       <div class="project-card">
-        <h3>Physics vs AI - Project Rhino</h3>
-        <p>Designed high-school physics MCQs with diagram-based logic so hard that it tricks GPT models at least twice out of four attempts.</p>
+        <div class="project-img">
+          <img src="/src/images/writing.jpeg" alt="Physics vs AI - Project Rhino">
+        </div>
+        <div class="project-info">
+          <h3>Physics vs AI - Project Rhino</h3>
+          <p>Designed high-school physics MCQs with diagram-based logic so hard that it tricks GPT models at least twice out of four attempts.</p>
+        </div>
       </div>
 
       <div class="project-card">
-        <h3>Mobile CLI Simulator</h3>
-        <p>Expo-based terminal runner. Builds and serves simulated Linux interface in React Native with custom task validations.</p>
+        <div class="project-img">
+          <img src="/src/images/client2.jpg" alt="Mobile CLI Simulator">
+        </div>
+        <div class="project-info">
+          <h3>Mobile CLI Simulator</h3>
+          <p>Expo-based terminal runner. Builds and serves simulated Linux interface in React Native with custom task validations.</p>
+        </div>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 2rem;">
+    <div style="text-align: center; margin-top: 3rem;">
       <a href="projects.html" class="primary-btn">View All Projects</a>
     </div>
   </section>
