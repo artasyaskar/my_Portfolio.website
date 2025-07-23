@@ -7,6 +7,7 @@ import {
   handleThemeToggler,
   handleScrollAnimations,
   handlePreloader,
+  handleSkillBars,
 } from './modules/ui.js';
 import { handleContactForm } from './modules/contact.js';
 import { handleProjectFiltering, initVanillaTilt } from './modules/projects.js';
@@ -25,6 +26,7 @@ class App {
     handleProjectFiltering();
     handleContactForm();
     handleScrollAnimations();
+    handleSkillBars();
     handleCustomCursor();
     handleThemeToggler();
     handleBackToTop();
