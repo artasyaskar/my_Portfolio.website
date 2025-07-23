@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "package.json",
@@ -9,8 +8,10 @@
       }
     }
   ],
-  "routes": [
-    { "src": "/projects.html", "dest": "/projects.html" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    {
+      "source": "/:path((?!assets/).*)",
+      "destination": "/index.html"
+    }
   ]
 }

@@ -4,10 +4,10 @@
   "description": "A modern, responsive portfolio website built with HTML, CSS, and JavaScript to showcase skills, projects, and testimonials.",
   "main": "script.js",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vite preview"
   },
   "repository": {
     "type": "git",
