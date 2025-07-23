@@ -1,6 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // --- TYPEWRITER EFFECT ---
-  const initTyped = () => {
+/**
+ * Main application class.
+ */
+class App {
+  /**
+   * Initializes the application.
+   */
+  constructor() {
+    this.init();
+  }
+
+  /**
+   * Registers all event handlers and initializes all components.
+   */
+  init() {
+    this.initTyped();
+    this.handleNavbarScroll();
+    this.handleMobileNav();
+    this.handleProjectFiltering();
+    this.handleContactForm();
+    this.handleScrollAnimations();
+    this.handleCustomCursor();
+    this.handleThemeToggler();
+    this.handleBackToTop();
+    this.handleSmoothScroll();
+  }
+
+  /**
+   * Initializes the typewriter effect.
+   */
+  initTyped() {
     const typedElement = document.querySelector('.typed-text');
     if (typedElement) {
       new Typed('.typed-text', {
@@ -11,10 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
         loop: true,
       });
     }
-  };
+  }
 
-  // --- NAVBAR STYLES ON SCROLL ---
-  const handleNavbarScroll = () => {
+  /**
+   * Handles the back to top button.
+   */
+  handleBackToTop() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    if (backToTopButton) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopButton.classList.add('show');
+        } else {
+          backToTopButton.classList.remove('show');
+        }
+      });
+    }
+  }
+
+  /**
+   * Handles the navbar style changes on scroll.
+   */
+  handleNavbarScroll() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
       window.addEventListener('scroll', () => {
@@ -25,10 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-  };
+  }
 
-  // --- MOBILE NAVIGATION ---
-  const handleMobileNav = () => {
+  /**
+   * Handles the mobile navigation.
+   */
+  handleMobileNav() {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
@@ -47,10 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
-  };
+  }
 
-  // --- PROJECT FILTERING ---
-  const handleProjectFiltering = () => {
+  /**
+   * Handles the project filtering.
+   */
+  handleProjectFiltering() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
@@ -72,14 +122,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
-  };
+  }
 
-  // --- CONTACT FORM SUBMISSION ---
-  const handleContactForm = () => {
+  /**
+   * Handles the contact form submission.
+   */
+  handleContactForm() {
     const contactForm = document.getElementById('contactForm');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('close-btn');
+    const popupMessage = document.getElementById('popup-message');
+    const submitBtn = document.querySelector('.submit-btn');
+    const btnText = document.querySelector('.btn-text');
+    const loader = document.querySelector('.loader');
+
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        btnText.style.display = 'none';
+        loader.style.display = 'block';
 
         const formData = new FormData(contactForm);
         const formObject = Object.fromEntries(formData.entries());
@@ -94,21 +156,43 @@ document.addEventListener('DOMContentLoaded', () => {
           });
 
           if (response.ok) {
-            alert('Thank you for your message! I will get back to you soon.');
+            popupMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+            popup.style.display = 'flex';
             contactForm.reset();
           } else {
-            alert('There was an error submitting your form. Please try again later.');
+            popupMessage.textContent = 'There was an error submitting your form. Please try again later.';
+            popup.style.display = 'flex';
           }
         } catch (error) {
           console.error('Error submitting form:', error);
-          alert('There was an error submitting your form. Please try again later.');
+          popupMessage.textContent = 'There was an error submitting your form. Please try again later.';
+          popup.style.display = 'flex';
+        } finally {
+          btnText.style.display = 'block';
+          loader.style.display = 'none';
         }
       });
     }
-  };
 
-  // --- SCROLL ANIMATIONS ---
-  const handleScrollAnimations = () => {
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+    }
+
+    if (popup) {
+      window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+          popup.style.display = 'none';
+        }
+      });
+    }
+  }
+
+  /**
+   * Handles the scroll animations.
+   */
+  handleScrollAnimations() {
     const sections = document.querySelectorAll('.animate-on-scroll');
 
     const animateOnScroll = () => {
@@ -124,17 +208,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Initial check
-  };
-
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if(section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
   }
 
-  // --- CUSTOM CURSOR ---
-  const handleCustomCursor = () => {
+  /**
+   * Handles the smooth scrolling effect.
+   */
+  handleSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+    });
+  }
+
+  /**
+   * Handles the custom cursor.
+   */
+  handleCustomCursor() {
     const cursor = document.querySelector('.cursor');
     if (cursor) {
       document.addEventListener('mousemove', e => {
@@ -150,10 +244,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
-  };
+  }
 
-  // --- THEME TOGGLER ---
-  const handleThemeToggler = () => {
+  /**
+   * Handles the theme toggler.
+   */
+  handleThemeToggler() {
     const themeToggler = document.getElementById('theme-toggler');
     if (themeToggler) {
       themeToggler.addEventListener('click', () => {
@@ -168,15 +264,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-  };
+  }
+}
 
-  // --- INITIALIZE ALL FUNCTIONS ---
-  initTyped();
-  handleNavbarScroll();
-  handleMobileNav();
-  handleProjectFiltering();
-  handleContactForm();
-  handleScrollAnimations();
-  handleCustomCursor();
-  handleThemeToggler();
+document.addEventListener('DOMContentLoaded', () => {
+  new App();
 });
