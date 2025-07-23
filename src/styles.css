@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', 'Poppins', sans-serif;
   line-height: 1.7;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -96,6 +96,26 @@ button {
 
 section {
   padding: var(--section-padding);
+}
+
+/* Preloader Styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Navbar Styles */
@@ -332,7 +352,7 @@ header {
 }
 
 .hero-image {
-  animation: slideInRight 1s ease-out;
+  animation: slideInRight 1s ease-out, float 3s ease-in-out infinite;
 }
 
 .hero-image img {
@@ -360,6 +380,18 @@ header {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -595,6 +627,49 @@ header {
   color: var(--text-color);
   font-weight: 500;
   font-size: 1rem;
+}
+
+/* Services Section */
+.services-section {
+  background-color: var(--bg-color);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--light-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service-card p {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Projects Section */
