@@ -17,8 +17,12 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="theme-toggler" id="theme-toggler">
+      <i class="fas fa-sun"></i>
+    </button>
     <div class="burger">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -28,17 +32,22 @@
 
   <header id="home">
     <div class="hero">
-      <h1>Artas Yaskar</h1>
-      <h2>Electrical Engineer | AI Challenger | Faith-driven Creator</h2>
-      <p class="hero-description">Engineering modern control systems, AI tools, and spiritually-driven tech experiences</p>
-      <div class="cta-buttons">
-        <button onclick="scrollToSection('projects')" class="primary-btn">Explore Projects</button>
-        <button onclick="scrollToSection('contact')" class="secondary-btn">Let’s Connect</button>
+      <div class="hero-text">
+        <h1>Artas Yaskar</h1>
+        <h2>Electrical Engineer | AI Challenger | Faith-driven Creator</h2>
+        <p class="hero-description">Engineering modern control systems, AI tools, and spiritually-driven tech experiences</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="primary-btn">Explore Projects</a>
+          <a href="#contact" class="secondary-btn">Let’s Connect</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/src/images/profile.jpg" alt="Artas Yaskar">
       </div>
     </div>
   </header>
 
-  <section id="about" class="about-section">
+  <section id="about" class="about-section animate-on-scroll">
     <div class="section-header">
       <h2>Who I Am</h2>
       <div class="underline"></div>
@@ -66,7 +75,7 @@
     </div>
   </section>
 
-  <section id="skills" class="skills-section">
+  <section id="skills" class="skills-section animate-on-scroll">
     <div class="section-header">
       <h2>My Toolbox</h2>
       <div class="underline"></div>
@@ -95,7 +104,7 @@
     </div>
   </section>
 
-  <section id="projects" class="projects-section">
+  <section id="projects" class="projects-section animate-on-scroll">
     <div class="section-header">
       <h2>Featured Projects</h2>
       <div class="underline"></div>
@@ -146,7 +155,42 @@
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
+  <section id="testimonials" class="testimonials-section animate-on-scroll">
+    <div class="section-header">
+      <h2>Testimonials</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="testimonials-container container">
+      <div class="testimonial">
+        <div class="testimonial-text">
+          <i class="fas fa-quote-left"></i>
+          <p>Artas is a highly skilled developer with a great eye for detail. He was able to take my vision and turn it into a beautiful, functional website. I would highly recommend him to anyone looking for a talented and reliable developer.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="/src/images/client1.webp" alt="Client 1">
+          <div>
+            <h4>John Doe</h4>
+            <p>CEO, Example Corp</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-text">
+          <i class="fas fa-quote-left"></i>
+          <p>Working with Artas was a pleasure. He is a true professional who is passionate about his work. He was always responsive to my needs and went above and beyond to make sure I was happy with the final product.</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="/src/images/client2.jpg" alt="Client 2">
+          <div>
+            <h4>Jane Smith</h4>
+            <p>Marketing Manager, Another Co</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section animate-on-scroll">
     <div class="section-header">
       <h2>Let’s Build Together</h2>
       <div class="underline"></div>
@@ -193,5 +237,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script type="module" src="/src/script.js"></script>
+  <div class="cursor"></div>
 </body>
 </html>
