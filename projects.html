@@ -37,10 +37,17 @@
         <h2>All Projects</h2>
         <div class="underline"></div>
       </div>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="cli">CLI</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="gamedev">GameDev</button>
+      </div>
       <div class="projects-grid">
 
         <!-- CLI Arena Ecosystem -->
-        <div class="project-card">
+        <div class="project-card" data-category="cli">
           <div class="project-img">
             <img src="src/images/portfolio.jpg" alt="CLI Arena">
           </div>
@@ -59,7 +66,7 @@
         </div>
 
         <!-- Bible Summarizer API -->
-        <div class="project-card">
+        <div class="project-card" data-category="ai">
           <div class="project-img">
             <img src="src/images/translation.jpg" alt="Bible Summarizer API">
           </div>
@@ -72,7 +79,7 @@
         </div>
 
         <!-- Cyberwatch CLI -->
-        <div class="project-card">
+        <div class="project-card" data-category="cli">
           <div class="project-img">
             <img src="src/images/client2.jpg" alt="Cyberwatch CLI">
           </div>
@@ -85,7 +92,7 @@
         </div>
 
         <!-- Project Rhino -->
-        <div class="project-card">
+        <div class="project-card" data-category="ai">
           <div class="project-img">
             <img src="src/images/writing.jpeg" alt="Project Rhino">
           </div>
@@ -96,7 +103,7 @@
         </div>
 
         <!-- 3D Dino Game -->
-        <div class="project-card">
+        <div class="project-card" data-category="gamedev">
           <div class="project-img">
             <img src="src/images/portfolio.jpg" alt="3D Dino Game">
           </div>
@@ -109,7 +116,7 @@
         </div>
 
         <!-- Portfolio Website -->
-        <div class="project-card">
+        <div class="project-card" data-category="web">
           <div class="project-img">
             <img src="src/images/portfolio.jpg" alt="Portfolio Website">
           </div>

@@ -110,6 +110,28 @@ export function handleScrollAnimations() {
   animateOnScroll(); // Initial check
 }
 
+export function handleSkillBars() {
+  const skillsSection = document.querySelector('.skills-section');
+  if (!skillsSection) return;
+
+  const animateSkills = () => {
+    const sectionTop = skillsSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionTop < windowHeight * 0.8) {
+      const progressBars = document.querySelectorAll('.progress-bar');
+      progressBars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = progress;
+      });
+      // Remove the event listener after the animation has been triggered
+      window.removeEventListener('scroll', animateSkills);
+    }
+  };
+
+  window.addEventListener('scroll', animateSkills);
+}
+
 export function handlePreloader() {
   const preloader = document.querySelector('.preloader');
   if (preloader) {

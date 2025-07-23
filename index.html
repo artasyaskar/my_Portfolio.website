@@ -84,25 +84,77 @@
       <div class="underline"></div>
     </div>
     <div class="skills-container">
-      <div class="skill-category">
-        <h3>Core Engineering</h3>
-        <div class="skill-item"><p>Control Systems (PID, Routh Stability)</p></div>
-        <div class="skill-item"><p>Electricity & Magnetism (MIT 8.02T)</p></div>
-        <div class="skill-item"><p>SystemVerilog & Logic Design</p></div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Control Systems (PID, Routh Stability)</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="90%"></div>
+        </div>
       </div>
-
-      <div class="skill-category">
-        <h3>Software & Dev Tools</h3>
-        <div class="skill-item"><p>Python (OOP, Simulation, CLI)</p></div>
-        <div class="skill-item"><p>FastAPI, Docker, Supabase</p></div>
-        <div class="skill-item"><p>React Native, Unity, GitHub Actions</p></div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Electricity & Magnetism (MIT 8.02T)</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="85%"></div>
+        </div>
       </div>
-
-      <div class="skill-category">
-        <h3>Specialties</h3>
-        <div class="skill-item"><p>Bible-Based AI Pipelines</p></div>
-        <div class="skill-item"><p>Multilingual UX + NLP</p></div>
-        <div class="skill-item"><p>Ultra-Hard DSA & AI Problem Design</p></div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>SystemVerilog & Logic Design</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="80%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Python (OOP, Simulation, CLI)</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="95%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>FastAPI, Docker, Supabase</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="85%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>React Native, Unity, GitHub Actions</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="80%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Bible-Based AI Pipelines</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="90%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Multilingual UX + NLP</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="85%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-info">
+          <span>Ultra-Hard DSA & AI Problem Design</span>
+        </div>
+        <div class="skill-progress">
+          <div class="progress-bar" data-progress="80%"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -223,13 +275,8 @@
             <span class="btn-text">Send Message</span>
             <span class="loader" style="display: none;"></span>
           </button>
+          <div id="form-message"></div>
         </form>
-      </div>
-    </div>
-    <div class="popup" id="popup">
-      <div class="popup-content">
-        <span class="close-btn" id="close-btn">&times;</span>
-        <p id="popup-message"></p>
       </div>
     </div>
   </section>

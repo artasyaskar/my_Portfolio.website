@@ -5,14 +5,17 @@ export function handleProjectFiltering() {
   if (filterButtons.length > 0) {
     filterButtons.forEach(button => {
       button.addEventListener('click', function() {
+        // Deactivate all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Activate the clicked button
         this.classList.add('active');
 
         const filterValue = this.getAttribute('data-filter');
 
         projectCards.forEach(card => {
-          if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-            card.style.display = 'flex';
+          const cardCategory = card.getAttribute('data-category');
+          if (filterValue === 'all' || cardCategory === filterValue) {
+            card.style.display = 'block'; // Or 'flex', 'grid', etc., depending on your layout
           } else {
             card.style.display = 'none';
           }
