@@ -184,8 +184,17 @@
           <div class="form-group"><input type="email" id="email" name="email" placeholder="Your Email" required></div>
           <div class="form-group"><input type="text" id="subject" name="subject" placeholder="Subject" required></div>
           <div class="form-group"><textarea id="message" name="message" placeholder="Your Message" required></textarea></div>
-          <button type="submit" class="submit-btn">Send Message</button>
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="loader" style="display: none;"></span>
+          </button>
         </form>
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <p id="popup-message"></p>
       </div>
     </div>
   </section>
@@ -196,6 +205,8 @@
       <p>&copy; 2025 Artas Yaskar. Built by hand, fueled by faith.</p>
     </div>
   </footer>
+
+  <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script type="module" src="src/script.js"></script>
