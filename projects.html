@@ -1,109 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/" />
-    <title>Projects | Artas Yaskar</title>
-    <link rel="icon" type="image/x-icon" href="/src/images/profile.jpg">
-    <link rel="stylesheet" href="/src/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="/" />
+  <title>Projects | Artas Yaskar</title>
+  <link rel="icon" type="image/x-icon" href="src/images/profile.jpg">
+  <link rel="stylesheet" href="src/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">AY</div>
-        <ul class="nav-links">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#skills">Skills</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
+  <nav class="navbar">
+    <div class="logo">AY</div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
       <li><a href="index.html#testimonials">Testimonials</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggler" id="theme-toggler">
+      <i class="fas fa-sun"></i>
+    </button>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
 
-    <header id="projects-hero" class="projects-hero-section">
-        <div class="hero-content">
-            <h1>My Work</h1>
-            <p>A collection of projects that showcase my skills and passion.</p>
-        </div>
-    </header>
+  <main class="projects-page">
+    <section id="all-projects" class="projects-section animate-on-scroll">
+      <div class="section-header">
+        <h2>All Projects</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- Add all your projects here -->
+      </div>
+    </section>
+  </main>
 
-    <main id="projects-main" class="projects-main-section">
-        <div class="container">
-            <div class="projects-grid">
-                <!-- All Projects will be dynamically loaded here or listed statically -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="/src/images/portfolio.jpg" alt="CLI-Arena">
-                    </div>
-                    <div class="project-info">
-                        <h3>CLI-Arena</h3>
-                        <p>Browser-based command-line simulation in Next.js to test shell logic visually. Built with Docker + ShadCN + Tailwind.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="/src/images/translation.jpg" alt="Bible Summarizer API">
-                    </div>
-                    <div class="project-info">
-                        <h3>Bible Summarizer API</h3>
-                        <p>Fetch any verse (KJV), get historical context and spiritual insights. Powered by Python, FastAPI, and blurring for prophet images.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="/src/images/writing.jpeg" alt="Physics vs AI - Project Rhino">
-                    </div>
-                    <div class="project-info">
-                        <h3>Physics vs AI - Project Rhino</h3>
-                        <p>Designed high-school physics MCQs with diagram-based logic so hard that it tricks GPT models at least twice out of four attempts.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="/src/images/client2.jpg" alt="Mobile CLI Simulator">
-                    </div>
-                    <div class="project-info">
-                        <h3>Mobile CLI Simulator</h3>
-                        <p>Expo-based terminal runner. Builds and serves simulated Linux interface in React Native with custom task validations.</p>
-                    </div>
-                </div>
-                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="/src/images/client1.webp" alt="Project Five">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Five</h3>
-                        <p>Description of project five.</p>
-                    </div>
-                </div>
-                 <div class="project-card">
-                    <div class="project-img">
-                        <img src="/src/images/background.jpg" alt="Project Six">
-                    </div>
-                    <div class="project-info">
-                        <h3>Project Six</h3>
-                        <p>Description of project six.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">AY</div>
+      <p>&copy; 2025 Artas Yaskar. Built by hand, fueled by faith.</p>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">AY</div>
-            <p>&copy; 2025 Artas Yaskar. Built by hand, fueled by faith.</p>
-        </div>
-    </footer>
-
-    <script type="module" src="/src/script.js"></script>
+  <script type="module" src="src/script.js"></script>
 </body>
 </html>
