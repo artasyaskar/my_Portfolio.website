@@ -13,8 +13,8 @@ export function handleNavbarScroll() {
 
 export function handleMobileNav() {
   const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links-mobile');
-  const navLinks = document.querySelectorAll('.nav-links-mobile li a');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li a');
 
   if (burger && nav) {
     const toggleNav = () => {
@@ -24,7 +24,13 @@ export function handleMobileNav() {
     };
 
     burger.addEventListener('click', toggleNav);
-    navLinks.forEach(link => link.addEventListener('click', toggleNav));
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (nav.classList.contains('nav-active')) {
+          toggleNav();
+        }
+      });
+    });
   }
 }
 
