@@ -1,35 +1,37 @@
 export function handleProjectFiltering() {
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const projectCards = document.querySelectorAll('.projects-grid .project-card');
 
-  if (filterButtons.length > 0) {
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        // Deactivate all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Activate the clicked button
-        this.classList.add('active');
+  if (filterButtons.length === 0) return;
 
-        const filterValue = this.getAttribute('data-filter');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Set active class on button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
 
-        projectCards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          if (filterValue === 'all' || cardCategory === filterValue) {
-            card.style.display = 'block'; // Or 'flex', 'grid', etc., depending on your layout
-          } else {
-            card.style.display = 'none';
-          }
-        });
+      const filter = button.dataset.filter;
+
+      projectCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
       });
     });
-  }
+  });
 }
 
 export function initVanillaTilt() {
-  VanillaTilt.init(document.querySelectorAll(".project-card"), {
-    max: 25,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.5,
-  });
+  const elements = document.querySelectorAll('[data-tilt]');
+  if (window.VanillaTilt) {
+    window.VanillaTilt.init(elements, {
+      max: 10,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+      scale: 1.05
+    });
+  }
 }
