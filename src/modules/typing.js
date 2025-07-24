@@ -1,12 +1,20 @@
 export function initTyped() {
-  const typedElement = document.querySelector('.typed-text');
-  if (typedElement) {
-    new Typed('.typed-text', {
-      strings: ['Writer', 'Translator', 'Web Developer'],
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
+  const typingElement = document.querySelector('.typing-text');
+  if (typingElement) {
+    new Typed('.typing-text', {
+      strings: [
+        "AI Engineer",
+        "Electrical Engineering Student",
+        "Systems & Simulation Specialist",
+        "CLI-First Developer"
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
       loop: true,
+      showCursor: true,
+      cursorChar: '_',
+      smartBackspace: true,
+      backDelay: 2000,
     });
   }
 }
