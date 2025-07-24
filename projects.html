@@ -12,113 +12,134 @@
 </head>
 <body>
 
+  <div class="preloader"><div class="loader"></div></div>
+
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
   <nav class="navbar">
-    <div class="logo">AY</div>
-    <ul class="nav-links">
-      <li><a href="index.html#home">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#skills">Skills</a></li>
-      <li><a href="index.html#projects">Projects</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-    <button class="theme-toggler" id="theme-toggler"><i class="fas fa-sun"></i></button>
-    <div class="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
+    <div class="container">
+      <a href="index.html" class="logo" data-cursor-hover>AY</a>
+      <ul class="nav-links">
+        <li><a href="index.html#home" data-cursor-hover>Home</a></li>
+        <li><a href="index.html#about" data-cursor-hover>About</a></li>
+        <li><a href="index.html#skills" data-cursor-hover>Skills</a></li>
+        <li><a href="projects.html" class="nav-link active" data-cursor-hover>Projects</a></li>
+        <li><a href="index.html#contact" data-cursor-hover>Contact</a></li>
+      </ul>
+      <button class="theme-toggler" id="theme-toggler" aria-label="Toggle theme" data-cursor-hover>
+        <i class="fas fa-sun"></i>
+      </button>
+      <div class="burger" aria-label="Open menu" data-cursor-hover>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
   </nav>
 
   <main class="projects-page">
-    <section id="all-projects" class="projects-section animate-on-scroll">
-      <div class="section-header">
-        <h2>All Projects</h2>
-        <div class="underline"></div>
-      </div>
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web</button>
-        <button class="filter-btn" data-filter="cli">CLI</button>
-        <button class="filter-btn" data-filter="ai">AI</button>
-        <button class="filter-btn" data-filter="gamedev">GameDev</button>
-      </div>
-      <div class="projects-grid">
-
-        <!-- CLI Arena Ecosystem -->
-        <div class="project-card" data-category="cli">
-          <div class="project-img">
-            <img src="src/images/portfolio.jpg" alt="CLI Arena">
-          </div>
-          <div class="project-info">
-            <h3>CLI Arena Ecosystem</h3>
-            <p>Multi-stack simulation + logic testing environment for developers. Built using Shell, Go, React Native, FastAPI, and Unity — deploys across Web, Mobile, and CLI.</p>
-            <p><strong>Repos:</strong>
-              <code>cli-arena-web-nextjs</code>,
-              <code>cli-arena-devops-go</code>,
-              <code>cli-arena-mobile-expo</code>,
-              <code>cli-arena-ml-fastapi</code>,
-              <code>cli-arena-gamedev-unity</code>
-            </p>
-            <p><a href="https://github.com/artasyaskar" target="_blank">View on GitHub</a></p>
-          </div>
+    <section id="all-projects" class="projects-section" data-aos="fade-up">
+      <div class="container">
+        <header class="section-header">
+          <h1 class="section-title">All Projects</h1>
+          <div class="underline"></div>
+        </header>
+        <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+          <button class="filter-btn active" data-filter="all" data-cursor-hover>All</button>
+          <button class="filter-btn" data-filter="web" data-cursor-hover>Web</button>
+          <button class="filter-btn" data-filter="cli" data-cursor-hover>CLI</button>
+          <button class="filter-btn" data-filter="ai" data-cursor-hover>AI</button>
+          <button class="filter-btn" data-filter="gamedev" data-cursor-hover>GameDev</button>
         </div>
+        <div class="projects-grid">
 
-        <!-- Bible Summarizer API -->
-        <div class="project-card" data-category="ai">
-          <div class="project-img">
-            <img src="src/images/translation.jpg" alt="Bible Summarizer API">
-          </div>
-          <div class="project-info">
-            <h3>Bible Summarizer API</h3>
-            <p>Python-based REST API that uses NLP to summarize Bible verses and add historical or archaeological context. Deployed with FastAPI + OpenAI API.</p>
-            <p><strong>Repo:</strong> <code>bible-summarizer-api</code></p>
-            <p><a href="https://github.com/artasyaskar/bible-summarizer-api" target="_blank">View on GitHub</a></p>
-          </div>
+          <!-- CLI Arena Ecosystem -->
+          <article class="project-card" data-category="cli" data-tilt data-aos="fade-up" data-aos-delay="200" data-cursor-hover>
+            <div class="project-img">
+              <img src="src/images/portfolio.jpg" alt="CLI Arena">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">CLI Arena Ecosystem</h3>
+              <p>Multi-stack simulation + logic testing environment for developers. Built using Shell, Go, React Native, FastAPI, and Unity — deploys across Web, Mobile, and CLI.</p>
+              <div class="project-tags">
+                <span>CLI</span><span>Go</span><span>Unity</span><span>React Native</span>
+              </div>
+              <a href="https://github.com/artasyaskar" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Bible Summarizer API -->
+          <article class="project-card" data-category="ai" data-tilt data-aos="fade-up" data-aos-delay="300" data-cursor-hover>
+            <div class="project-img">
+              <img src="src/images/translation.jpg" alt="Bible Summarizer API">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Bible Summarizer API</h3>
+              <p>Python-based REST API that uses NLP to summarize Bible verses and add historical or archaeological context. Deployed with FastAPI + OpenAI API.</p>
+              <div class="project-tags">
+                <span>AI</span><span>Python</span><span>FastAPI</span>
+              </div>
+              <a href="https://github.com/artasyaskar/bible-summarizer-api" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Cyberwatch CLI -->
+          <article class="project-card" data-category="cli" data-tilt data-aos="fade-up" data-aos-delay="400" data-cursor-hover>
+            <div class="project-img">
+              <img src="src/images/client2.jpg" alt="Cyberwatch CLI">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Cyberwatch CLI Framework</h3>
+              <p>Terminal-native Python CLI tool for log parsing, anomaly detection, and custom rule enforcement in cybersecurity pipelines.</p>
+              <div class="project-tags">
+                <span>CLI</span><span>Python</span><span>Security</span>
+              </div>
+              <a href="https://github.com/artasyaskar/cyberwatch" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- 3D Dino Game -->
+          <article class="project-card" data-category="gamedev" data-tilt data-aos="fade-up" data-aos-delay="200" data-cursor-hover>
+            <div class="project-img">
+              <img src="src/images/portfolio.jpg" alt="3D Dino Game">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">3D Dino Game</h3>
+              <p>Chrome-inspired endless runner built in JavaScript with added 3D rendering, speed scaling, and dark-themed UI.</p>
+              <div class="project-tags">
+                <span>GameDev</span><span>JavaScript</span>
+              </div>
+              <a href="https://github.com/artasyaskar/3DDinoGame" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Portfolio Website -->
+          <article class="project-card" data-category="web" data-tilt data-aos="fade-up" data-aos-delay="300" data-cursor-hover>
+            <div class="project-img">
+              <img src="src/images/portfolio.jpg" alt="Portfolio Website">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Portfolio Website</h3>
+              <p>Responsive personal portfolio built with static HTML/CSS/JS. Features project showcase, contact form, resume download, and GitHub linking.</p>
+              <div class="project-tags">
+                <span>Web</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a href="https://github.com/artasyaskar/myPortfolio.website" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
         </div>
-
-        <!-- Cyberwatch CLI -->
-        <div class="project-card" data-category="cli">
-          <div class="project-img">
-            <img src="src/images/client2.jpg" alt="Cyberwatch CLI">
-          </div>
-          <div class="project-info">
-            <h3>Cyberwatch CLI Framework</h3>
-            <p>Terminal-native Python CLI tool for log parsing, anomaly detection, and custom rule enforcement in cybersecurity pipelines.</p>
-            <p><strong>Repo:</strong> <code>cyberwatch</code></p>
-            <p><a href="https://github.com/artasyaskar/cyberwatch" target="_blank">View on GitHub</a></p>
-          </div>
-        </div>
-
-        <!-- 3D Dino Game -->
-        <div class="project-card" data-category="gamedev">
-          <div class="project-img">
-            <img src="src/images/portfolio.jpg" alt="3D Dino Game">
-          </div>
-          <div class="project-info">
-            <h3>3D Dino Game</h3>
-            <p>Chrome-inspired endless runner built in JavaScript with added 3D rendering, speed scaling, and dark-themed UI.</p>
-            <p><strong>Repo:</strong> <code>3DDinoGame</code></p>
-            <p><a href="https://github.com/artasyaskar/3DDinoGame" target="_blank">View on GitHub</a></p>
-          </div>
-        </div>
-
-        <!-- Portfolio Website -->
-        <div class="project-card" data-category="web">
-          <div class="project-img">
-            <img src="src/images/portfolio.jpg" alt="Portfolio Website">
-          </div>
-          <div class="project-info">
-            <h3>Portfolio Website</h3>
-            <p>Responsive personal portfolio built with static HTML/CSS/JS. Features project showcase, contact form, resume download, and GitHub linking.</p>
-            <p><strong>Repo:</strong> <code>myPortfolio.website</code></p>
-            <p><a href="https://github.com/artasyaskar/myPortfolio.website" target="_blank">View on GitHub</a></p>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">AY</div>
-      <p>&copy; 2025 Artas Yaskar. Built with code and crafted for impact.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="footer-logo" data-cursor-hover>AY</a>
+        <p>&copy; 2025 Artas Yaskar. Built with code and crafted for impact.</p>
+      </div>
     </div>
   </footer>
 
