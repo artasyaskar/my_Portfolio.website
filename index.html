@@ -14,23 +14,23 @@
 
   <div class="preloader"><div class="loader"></div></div>
 
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
 
   <nav class="navbar">
     <div class="container">
-      <a href="#home" class="logo">AY</a>
+      <a href="#home" class="logo" data-cursor-hover>AY</a>
       <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link active" data-cursor-hover>Home</a></li>
+        <li><a href="#about" class="nav-link" data-cursor-hover>About</a></li>
+        <li><a href="#skills" class="nav-link" data-cursor-hover>Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-cursor-hover>Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-cursor-hover>Contact</a></li>
       </ul>
-      <button class="theme-toggler" id="theme-toggler" aria-label="Toggle theme">
+      <button class="theme-toggler" id="theme-toggler" aria-label="Toggle theme" data-cursor-hover>
         <i class="fas fa-sun"></i>
       </button>
-      <div class="burger" aria-label="Open menu">
+      <div class="burger" aria-label="Open menu" data-cursor-hover>
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
@@ -38,34 +38,38 @@
     </div>
   </nav>
 
-  <header id="home">
+  <header id="home" class="hero-section">
     <div class="container">
-      <div class="hero">
-        <div class="hero-text">
-          <h1>Artas Yaskar</h1>
-          <h2>AI Engineer | Electrical Engineering Student | Systems & Simulation Specialist</h2>
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right">
+          <h1 class="hero-title">Artas Yaskar</h1>
+          <p class="hero-subtitle">
+            <span class="typing-text"></span>
+          </p>
           <p class="hero-description">I build multilingual AI tools, CLI ecosystems, and real-time automation pipelines using Python, Go, and FastAPI — with a foundation in Electrical Engineering.</p>
           <div class="cta-buttons">
-            <a href="#projects" class="primary-btn">Explore Projects</a>
-            <a href="#contact" class="secondary-btn">Let’s Connect</a>
+            <a href="#projects" class="primary-btn" data-cursor-hover>Explore Projects</a>
+            <a href="#contact" class="secondary-btn" data-cursor-hover>Let’s Connect</a>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="src/images/profile.jpg" alt="Artas Yaskar">
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
+          <div class="image-wrapper" data-tilt>
+            <img src="src/images/profile.jpg" alt="Artas Yaskar">
+          </div>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="about" class="about-section fade-up">
+    <section id="about" class="about-section" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
-          <h2>Who I Am</h2>
+          <h2 class="section-title">Who I Am</h2>
           <div class="underline"></div>
         </div>
         <div class="about-content">
-          <div class="about-image">
+          <div class="about-image" data-tilt>
             <img src="src/images/profile.jpg" alt="Artas Yaskar">
           </div>
           <div class="about-text">
@@ -78,7 +82,7 @@
               My work spans Python, Go, FastAPI, React Native, and Unity — with a strong focus on clean architecture, DX, and shipping open-source.
             </p>
             <div class="about-buttons">
-              <a href="src/assets/my__Resume.pdf" download="Artas_Yaskar_CV.pdf" class="primary-btn download-cv">
+              <a href="src/assets/my__Resume.pdf" download="Artas_Yaskar_CV.pdf" class="primary-btn download-cv" data-cursor-hover>
                 Download CV <i class="fas fa-download"></i>
               </a>
             </div>
@@ -87,42 +91,42 @@
       </div>
     </section>
 
-    <section id="skills" class="skills-section fade-up">
+    <section id="skills" class="skills-section" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
-          <h2>My Toolbox</h2>
+          <h2 class="section-title">My Toolbox</h2>
           <div class="underline"></div>
         </div>
         <div class="skills-container">
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="100">
             <div class="skill-info"><span>Python (OOP, CLI, Automation)</span><span>95%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="95"></div></div>
           </div>
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="150">
             <div class="skill-info"><span>FastAPI, Flask, REST APIs</span><span>90%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="90"></div></div>
           </div>
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="200">
             <div class="skill-info"><span>Go, Shell Scripting, DevOps</span><span>85%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="85"></div></div>
           </div>
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="250">
             <div class="skill-info"><span>React Native, Unity (3D)</span><span>80%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="80"></div></div>
           </div>
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="300">
             <div class="skill-info"><span>Docker, GitHub Actions</span><span>85%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="85"></div></div>
           </div>
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="350">
             <div class="skill-info"><span>NLP + Multilingual UX</span><span>90%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="90"></div></div>
           </div>
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="400">
             <div class="skill-info"><span>CLI Ecosystems & Automation</span><span>90%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="90"></div></div>
           </div>
-          <div class="skill-bar">
+          <div class="skill-bar" data-aos="fade-up" data-aos-delay="450">
             <div class="skill-info"><span>OpenAI API, Prompt Engineering</span><span>80%</span></div>
             <div class="skill-progress"><div class="progress-bar" data-progress="80"></div></div>
           </div>
@@ -130,94 +134,94 @@
       </div>
     </section>
 
-    <section id="services" class="services-section fade-up">
+    <section id="services" class="services-section" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
-          <h2>My Services</h2>
+          <h2 class="section-title">My Services</h2>
           <div class="underline"></div>
         </div>
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100" data-cursor-hover>
             <div class="service-icon"><i class="fas fa-code"></i></div>
-            <h3>Web & CLI Development</h3>
+            <h3 class="service-title">Web & CLI Development</h3>
             <p>I build cross-platform tools and APIs with Python, Go, Shell, and JavaScript.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-cursor-hover>
             <div class="service-icon"><i class="fas fa-brain"></i></div>
-            <h3>AI & ML Prototyping</h3>
+            <h3 class="service-title">AI & ML Prototyping</h3>
             <p>I craft custom NLP pipelines, prompt flows, and simulation-ready AI wrappers.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300" data-cursor-hover>
             <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>DevOps + Cyber CLI</h3>
+            <h3 class="service-title">DevOps + Cyber CLI</h3>
             <p>I create lightweight CLI security tools and developer automation systems.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="projects-section fade-up">
+    <section id="projects" class="projects-section" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
-          <h2>Featured Projects</h2>
+          <h2 class="section-title">Featured Projects</h2>
           <div class="underline"></div>
         </div>
         <div class="projects-grid">
-          <div class="project-card" data-tilt>
+          <div class="project-card" data-tilt data-aos="fade-up" data-aos-delay="100" data-cursor-hover>
             <div class="project-img"><img src="src/images/portfolio.jpg" alt="CLI-Arena"></div>
             <div class="project-info">
-              <h3>CLI Arena Ecosystem</h3>
+              <h3 class="project-title">CLI Arena Ecosystem</h3>
               <p>Cross-platform CLI game + simulator stack built in Shell, React Native, Unity, FastAPI, and Go. Dev tool to test developer logic interactively.</p>
             </div>
           </div>
-          <div class="project-card" data-tilt>
+          <div class="project-card" data-tilt data-aos="fade-up" data-aos-delay="200" data-cursor-hover>
             <div class="project-img"><img src="src/images/translation.jpg" alt="Bible Summarizer API"></div>
             <div class="project-info">
-              <h3>Bible Summarizer API</h3>
+              <h3 class="project-title">Bible Summarizer API</h3>
               <p>Python-based REST API that generates summaries, historical context, and blurred scene representations for selected Bible verses.</p>
             </div>
           </div>
-          <div class="project-card" data-tilt>
+          <div class="project-card" data-tilt data-aos="fade-up" data-aos-delay="300" data-cursor-hover>
             <div class="project-img"><img src="src/images/client2.jpg" alt="Cyberwatch CLI"></div>
             <div class="project-info">
-              <h3>Cyberwatch CLI Framework</h3>
+              <h3 class="project-title">Cyberwatch CLI Framework</h3>
               <p>Lightweight security CLI tool built in Python for parsing logs, detecting anomalies, and enforcing custom rule-based alerts.</p>
             </div>
           </div>
-          <div class="project-card" data-tilt>
+          <div class="project-card" data-tilt data-aos="fade-up" data-aos-delay="400" data-cursor-hover>
             <div class="project-img"><img src="src/images/portfolio.jpg" alt="3D Dino Game"></div>
             <div class="project-info">
-              <h3>3D Dino Game</h3>
+              <h3 class="project-title">3D Dino Game</h3>
               <p>Endless runner dinosaur game built in JavaScript with 3D visuals. Includes collision detection, speed scaling, and dark UI themes.</p>
             </div>
           </div>
         </div>
         <div class="view-all-btn-container">
-          <a href="projects.html" class="primary-btn">View All Projects</a>
+          <a href="projects.html" class="primary-btn" data-cursor-hover>View All Projects</a>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section fade-up">
+    <section id="contact" class="contact-section" data-aos="fade-up">
       <div class="container">
         <div class="contact-container">
           <div class="contact-info">
             <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
-              <h2>Let’s Build Together</h2>
+              <h2 class="section-title">Let’s Build Together</h2>
               <div class="underline" style="margin: 0;"></div>
             </div>
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
               <div>
                 <h4>Email</h4>
-                <p><a href="mailto:artasyaskar@gmail.com">artasyaskar@gmail.com</a></p>
+                <p><a href="mailto:artasyaskar@gmail.com" data-cursor-hover>artasyaskar@gmail.com</a></p>
               </div>
             </div>
             <div class="contact-item">
               <i class="fas fa-phone"></i>
               <div>
                 <h4>Phone</h4>
-                <p><a href="tel:+923426386433">+92 342 6386433</a></p>
+                <p><a href="tel:+923426386433" data-cursor-hover>+92 342 6386433</a></p>
               </div>
             </div>
             <div class="contact-item">
@@ -228,26 +232,26 @@
               </div>
             </div>
             <div class="social-links">
-              <a href="https://www.linkedin.com/in/artas-yaskar-a546a4346/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/artasyaskar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.instagram.com/artas_yaskar/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/artas-yaskar-a546a4346/" target="_blank" aria-label="LinkedIn" data-cursor-hover><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/artasyaskar" target="_blank" aria-label="GitHub" data-cursor-hover><i class="fab fa-github"></i></a>
+              <a href="https://www.instagram.com/artas_yaskar/" target="_blank" aria-label="Instagram" data-cursor-hover><i class="fab fa-instagram"></i></a>
             </div>
           </div>
           <div class="contact-form">
             <form id="contactForm">
               <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="text" id="name" name="name" placeholder="Your Name" required data-cursor-hover>
               </div>
               <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required data-cursor-hover>
               </div>
               <div class="form-group">
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required data-cursor-hover>
               </div>
               <div class="form-group">
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <textarea id="message" name="message" placeholder="Your Message" required data-cursor-hover></textarea>
               </div>
-              <button type="submit" class="primary-btn submit-btn">
+              <button type="submit" class="primary-btn submit-btn" data-cursor-hover>
                 <span class="btn-text">Send Message</span>
                 <span class="loader" style="display: none;"></span>
               </button>
@@ -259,16 +263,16 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <a href="#home" class="footer-logo">AY</a>
+        <a href="#home" class="footer-logo" data-cursor-hover>AY</a>
         <p>&copy; 2025 Artas Yaskar. Built by hand. Engineered with excellence.</p>
       </div>
     </div>
   </footer>
 
-  <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+  <a href="#home" class="back-to-top" aria-label="Back to top" data-cursor-hover><i class="fas fa-arrow-up"></i></a>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   <script type="module" src="src/script.js"></script>
