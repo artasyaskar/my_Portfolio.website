@@ -13,22 +13,18 @@ export function handleNavbarScroll() {
 
 export function handleMobileNav() {
   const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links li');
+  const nav = document.querySelector('.nav-links-mobile');
+  const navLinks = document.querySelectorAll('.nav-links-mobile li a');
 
   if (burger && nav) {
-    burger.addEventListener('click', () => {
+    const toggleNav = () => {
       nav.classList.toggle('nav-active');
       burger.classList.toggle('toggle');
+      document.body.classList.toggle('no-scroll');
+    };
 
-      navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = '';
-        } else {
-          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-        }
-      });
-    });
+    burger.addEventListener('click', toggleNav);
+    navLinks.forEach(link => link.addEventListener('click', toggleNav));
   }
 }
 
@@ -47,29 +43,43 @@ export function handleBackToTop() {
 
 export function handleSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetElement = document.querySelector(this.getAttribute('href'));
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 }
 
 export function handleCustomCursor() {
-  const cursor = document.querySelector('.cursor');
-  if (cursor) {
-    document.addEventListener('mousemove', e => {
-      cursor.setAttribute('style', `top: ${e.pageY}px; left: ${e.pageX}px;`);
+  const cursorDot = document.querySelector('[data-cursor-dot]');
+  const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+  if (cursorDot && cursorOutline) {
+    window.addEventListener('mousemove', (e) => {
+      const { clientX: posX, clientY: posY } = e;
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+      cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+      }, { duration: 500, fill: 'forwards' });
     });
 
-    document.querySelectorAll('a, button, .project-card').forEach(el => {
-      el.addEventListener('mouseover', () => {
-        cursor.classList.add('hover');
+    document.querySelectorAll('[data-cursor-hover]').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        cursorOutline.style.backgroundColor = 'var(--primary-color)';
+        cursorOutline.style.opacity = '0.3';
+        cursorDot.style.transform = 'translate(-50%, -50%) scale(0.5)';
       });
-      el.addEventListener('mouseout', () => {
-        cursor.classList.remove('hover');
+      el.addEventListener('mouseleave', () => {
+        cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursorOutline.style.backgroundColor = 'transparent';
+        cursorOutline.style.opacity = '1';
+        cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
       });
     });
   }
@@ -77,66 +87,72 @@ export function handleCustomCursor() {
 
 export function handleThemeToggler() {
   const themeToggler = document.getElementById('theme-toggler');
-  if (themeToggler) {
-    themeToggler.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme');
-      const icon = themeToggler.querySelector('i');
-      if (document.body.classList.contains('light-theme')) {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-      } else {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-      }
-    });
+  const body = document.body;
+  const icon = themeToggler.querySelector('i');
+
+  const setDarkTheme = () => {
+    body.classList.remove('light-theme');
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+    localStorage.setItem('theme', 'dark');
+  };
+
+  const setLightTheme = () => {
+    body.classList.add('light-theme');
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+    localStorage.setItem('theme', 'light');
+  };
+
+  themeToggler.addEventListener('click', () => {
+    if (body.classList.contains('light-theme')) {
+      setDarkTheme();
+    } else {
+      setLightTheme();
+    }
+  });
+
+  // Check for saved theme preference
+  if (localStorage.getItem('theme') === 'light') {
+    setLightTheme();
   }
 }
 
 export function handleScrollAnimations() {
-  const sections = document.querySelectorAll('.animate-on-scroll');
-
-  const animateOnScroll = () => {
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (sectionTop < windowHeight * 0.8) {
-        section.classList.add('animate');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', animateOnScroll);
-  animateOnScroll(); // Initial check
-}
-
-export function handleSkillBars() {
-  const skillsSection = document.querySelector('.skills-section');
-  if (!skillsSection) return;
-
-  const animateSkills = () => {
-    const sectionTop = skillsSection.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (sectionTop < windowHeight * 0.8) {
-      const progressBars = document.querySelectorAll('.progress-bar');
-      progressBars.forEach(bar => {
-        const progress = bar.getAttribute('data-progress');
-        bar.style.width = progress;
-      });
-      // Remove the event listener after the animation has been triggered
-      window.removeEventListener('scroll', animateSkills);
-    }
-  };
-
-  window.addEventListener('scroll', animateSkills);
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 50,
+  });
 }
 
 export function handlePreloader() {
   const preloader = document.querySelector('.preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.classList.add('hidden');
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+      }, 200);
     });
   }
+}
+
+export function handleSkillBars() {
+  const skillBars = document.querySelectorAll('.progress-bar');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target;
+        const progress = progressBar.dataset.progress;
+        progressBar.style.width = `${progress}%`;
+        observer.unobserve(progressBar);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  skillBars.forEach(bar => {
+    observer.observe(bar);
+  });
 }
