@@ -18,12 +18,12 @@ export function handleContactForm() {
       const formObject = Object.fromEntries(formData.entries());
 
       try {
-        const response = await fetch('/api/contact', {
+        const response = await fetch(contactForm.action, {
           method: 'POST',
+          body: formData,
           headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formObject),
+            'Accept': 'application/json'
+          }
         });
 
         if (response.ok) {
@@ -31,8 +31,14 @@ export function handleContactForm() {
           formMessage.className = 'success';
           contactForm.reset();
         } else {
-          formMessage.textContent = 'There was an error submitting your form. Please try again later.';
-          formMessage.className = 'error';
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              formMessage.textContent = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              formMessage.textContent = 'There was an error submitting your form. Please try again later.';
+            }
+            formMessage.className = 'error';
+          })
         }
       } catch (error) {
         console.error('Error submitting form:', error);
