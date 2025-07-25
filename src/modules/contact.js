@@ -1,4 +1,5 @@
 export function handleContactForm() {
+  // IMPORTANT: Make sure to replace "YOUR_FORM_ID" in the form's "action" attribute in index.html with your actual Formspree form ID.
   const contactForm = document.getElementById('contactForm');
   const formMessage = document.getElementById('form-message');
   const submitBtn = document.querySelector('.submit-btn');
