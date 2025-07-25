@@ -83,7 +83,7 @@
               My work spans Python, Go, FastAPI, React Native, and Unity — with a strong focus on clean architecture, DX, and shipping open-source.
             </p>
             <div class="about-buttons">
-              <a href="src/assets/my__Resume.pdf" download="Artas_Yaskar_CV.pdf" class="primary-btn download-cv" data-cursor-hover>
+              <a href="/my__Resume.pdf" download="Artas_Yaskar_CV.pdf" class="primary-btn download-cv" data-cursor-hover target="_blank" rel="noopener noreferrer">
                 Download CV <i class="fas fa-download"></i>
               </a>
             </div>
@@ -239,7 +239,7 @@
             </div>
           </div>
           <div class="contact-form">
-            <form id="contactForm">
+            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
               <div class="form-group">
                 <input type="text" id="name" name="name" placeholder="Your Name" required data-cursor-hover>
               </div>
@@ -258,6 +258,9 @@
               </button>
               <div id="form-message"></div>
             </form>
+            <p style="font-size: 0.8rem; margin-top: 1rem; text-align: center;">
+              <strong>Note:</strong> To receive form submissions, replace <code>YOUR_FORM_ID</code> in the <code>action</code> attribute of the form with your own Formspree form ID.
+            </p>
           </div>
         </div>
       </div>
