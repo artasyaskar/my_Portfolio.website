@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "package.json",
@@ -10,20 +11,16 @@
   ],
   "routes": [
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
       "src": "/projects",
       "dest": "/projects.html"
     },
     {
-      "src": "/index.html",
-      "dest": "/"
-    },
-    {
       "src": "/(.*)",
-      "status": 200,
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
-      },
-      "continue": true
+      "dest": "/index.html"
     }
   ]
 }
