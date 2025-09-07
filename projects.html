@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="src/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -53,82 +54,149 @@
           <button class="filter-btn" data-filter="gamedev" data-cursor-hover>GameDev</button>
         </div>
         <div class="projects-grid">
-
-          <!-- CLI Arena Ecosystem -->
-          <article class="project-card" data-category="cli" data-tilt data-aos="fade-up" data-aos-delay="200" data-cursor-hover>
+          <!-- 1. Project.Bible AI -->
+          <article class="project-card" data-category="ai" data-tilt data-aos="fade-up" data-aos-delay="100" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/Project.Bible-Ai" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
             <div class="project-img">
-              <img src="src/images/portfolio.jpg" alt="CLI Arena">
+              <img src="src/images/Project1.png" alt="Project.Bible AI">
             </div>
             <div class="project-info">
-              <h3 class="project-title">CLI Arena Ecosystem</h3>
-              <p>Multi-stack simulation + logic testing environment for developers. Built using Shell, Go, React Native, FastAPI, and Unity — deploys across Web, Mobile, and CLI.</p>
+              <h3 class="project-title">Project.Bible AI</h3>
+              <p>Full-stack application delivering AI-powered contextual summaries and historical references for Bible study. Integrated multilingual support and responsive UI, enabling seamless exploration across multiple books and chapters.</p>
               <div class="project-tags">
-                <span>CLI</span><span>Go</span><span>Unity</span><span>React Native</span>
+                <span>AI</span><span>Full-Stack</span><span>Multilingual</span><span>Web</span>
               </div>
-              <a href="https://github.com/artasyaskar" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+              <a href="https://github.com/artasyaskar/Project.Bible-Ai" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
           </article>
 
-          <!-- Bible Summarizer API -->
-          <article class="project-card" data-category="ai" data-tilt data-aos="fade-up" data-aos-delay="300" data-cursor-hover>
+          <!-- 2. ControlVerse -->
+          <article class="project-card" data-category="ai" data-tilt data-aos="fade-up" data-aos-delay="150" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/ControlVerse" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
             <div class="project-img">
-              <img src="src/images/translation.jpg" alt="Bible Summarizer API">
+              <img src="src/images/controlverse1.png" alt="ControlVerse">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">ControlVerse</h3>
+              <p>Interactive control-systems simulation platform developed in Python and MATLAB. Designed modules for stability analysis, frequency response, and real-time visualization of dynamic systems.</p>
+              <div class="project-tags">
+                <span>AI</span><span>Python</span><span>MATLAB</span><span>Simulation</span>
+              </div>
+              <a href="https://github.com/artasyaskar/ControlVerse" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- 3. Handsign Detection -->
+          <article class="project-card" data-category="ai" data-tilt data-aos="fade-up" data-aos-delay="200" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/Handsign-Detection_Project" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
+            <div class="project-img">
+              <img src="src/images/Handsign.jpg" alt="Handsign Detection">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Handsign Detection</h3>
+              <p>Computer vision application for real-time hand gesture recognition using OpenCV and TensorFlow. Achieved 95%+ accuracy on a custom dataset; enables intuitive human-computer interaction.</p>
+              <div class="project-tags">
+                <span>AI</span><span>Computer Vision</span><span>Python</span><span>TensorFlow</span>
+              </div>
+              <a href="https://github.com/artasyaskar/Handsign-Detection_Project" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- 4. 3D Dino Game -->
+          <article class="project-card" data-category="gamedev" data-tilt data-aos="fade-up" data-aos-delay="250" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/3D_DinoGame" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
+            <div class="project-img">
+              <img src="src/images/dino.jpg" alt="3D Dino Game">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">3D Dino Game</h3>
+              <p>Browser-based endless runner built with JavaScript and WebGL. Implemented adaptive difficulty, collision detection, and responsive design; achieved 1k+ online plays.</p>
+              <div class="project-tags">
+                <span>GameDev</span><span>JavaScript</span><span>WebGL</span><span>3D</span>
+              </div>
+              <a href="https://github.com/artasyaskar/3D_DinoGame" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- 5. Portfolio Website -->
+          <article class="project-card" data-category="web" data-tilt data-aos="fade-up" data-aos-delay="300" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/my_Portfolio.website" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
+            <div class="project-img">
+              <img src="src/images/my_portfolio.jpg" alt="Portfolio Website">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Portfolio Website</h3>
+              <p>Responsive portfolio (HTML/CSS/JS) integrating GitHub repositories and interactive UI. Attracted 500+ unique visitors and serves as a central hub for professional branding.</p>
+              <div class="project-tags">
+                <span>Web</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a href="https://github.com/artasyaskar/my_Portfolio.website" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- 6. Bible Summarizer API -->
+          <article class="project-card" data-category="ai" data-tilt data-aos="fade-up" data-aos-delay="350" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/bible-summarizer-api" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
+            <div class="project-img">
+              <img src="src/images/github.jpg" alt="Bible Summarizer API">
             </div>
             <div class="project-info">
               <h3 class="project-title">Bible Summarizer API</h3>
-              <p>Python-based REST API that uses NLP to summarize Bible verses and add historical or archaeological context. Deployed with FastAPI + OpenAI API.</p>
+              <p>Backend REST API developed with FastAPI to generate multilingual summaries of Bible chapters. Optimized for low-latency inference and scalability; serving 200+ daily requests in English and Urdu.</p>
               <div class="project-tags">
-                <span>AI</span><span>Python</span><span>FastAPI</span>
+                <span>AI</span><span>Python</span><span>FastAPI</span><span>NLP</span>
               </div>
               <a href="https://github.com/artasyaskar/bible-summarizer-api" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
           </article>
 
-          <!-- Cyberwatch CLI -->
+          <!-- 7. CLI Arena Ecosystem -->
           <article class="project-card" data-category="cli" data-tilt data-aos="fade-up" data-aos-delay="400" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/cli-arena-ml-fastapi" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
             <div class="project-img">
-              <img src="src/images/client2.jpg" alt="Cyberwatch CLI">
+              <img src="src/images/github.jpg" alt="CLI Arena Ecosystem">
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">CLI Arena Ecosystem</h3>
+              <p>Cross-platform CLI simulation suite integrating Web (Next.js), Mobile (React Native), Unity (GameDev), and FastAPI (ML). Used in peer workshops to benchmark problem-solving efficiency, improving completion times by 30%.</p>
+              <div class="project-tags">
+                <span>CLI</span><span>Next.js</span><span>React Native</span><span>Unity</span><span>FastAPI</span>
+              </div>
+              <a href="https://github.com/artasyaskar/cli-arena-ml-fastapi" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- 8. Cyberwatch CLI Framework -->
+          <article class="project-card" data-category="cli" data-tilt data-aos="fade-up" data-aos-delay="450" data-cursor-hover>
+            <a href="https://github.com/artasyaskar/cyberwatch" class="github-btn" target="_blank" aria-label="View on GitHub" data-cursor-hover>
+              <i class="fab fa-github"></i>
+            </a>
+            <div class="project-img">
+              <img src="src/images/github.jpg" alt="Cyberwatch CLI Framework">
             </div>
             <div class="project-info">
               <h3 class="project-title">Cyberwatch CLI Framework</h3>
-              <p>Terminal-native Python CLI tool for log parsing, anomaly detection, and custom rule enforcement in cybersecurity pipelines.</p>
+              <p>Python-based security tool for log parsing and anomaly detection with customizable rules. Reduced manual review time by 40% in academic test environments.</p>
               <div class="project-tags">
-                <span>CLI</span><span>Python</span><span>Security</span>
+                <span>CLI</span><span>Python</span><span>Security</span><span>Automation</span>
               </div>
               <a href="https://github.com/artasyaskar/cyberwatch" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
             </div>
           </article>
-
-          <!-- 3D Dino Game -->
-          <article class="project-card" data-category="gamedev" data-tilt data-aos="fade-up" data-aos-delay="200" data-cursor-hover>
-            <div class="project-img">
-              <img src="src/images/portfolio.jpg" alt="3D Dino Game">
-            </div>
-            <div class="project-info">
-              <h3 class="project-title">3D Dino Game</h3>
-              <p>Chrome-inspired endless runner built in JavaScript with added 3D rendering, speed scaling, and dark-themed UI.</p>
-              <div class="project-tags">
-                <span>GameDev</span><span>JavaScript</span>
-              </div>
-              <a href="https://github.com/artasyaskar/3DDinoGame" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </article>
-
-          <!-- Portfolio Website -->
-          <article class="project-card" data-category="web" data-tilt data-aos="fade-up" data-aos-delay="300" data-cursor-hover>
-            <div class="project-img">
-              <img src="src/images/portfolio.jpg" alt="Portfolio Website">
-            </div>
-            <div class="project-info">
-              <h3 class="project-title">Portfolio Website</h3>
-              <p>Responsive personal portfolio built with static HTML/CSS/JS. Features project showcase, contact form, resume download, and GitHub linking.</p>
-              <div class="project-tags">
-                <span>Web</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
-              </div>
-              <a href="https://github.com/artasyaskar/myPortfolio.website" class="project-link" target="_blank" data-cursor-hover>View on GitHub <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
@@ -143,6 +211,54 @@
     </div>
   </footer>
 
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Main Script -->
   <script type="module" src="src/script.js"></script>
+  
+  <!-- Cursor Initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize AOS if it exists
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+        });
+      }
+      
+      // Initialize cursor
+      const cursorDot = document.querySelector('[data-cursor-dot]');
+      const cursorOutline = document.querySelector('[data-cursor-outline]');
+      
+      if (cursorDot && cursorOutline) {
+        // Make sure cursor elements are visible
+        cursorDot.style.display = 'block';
+        cursorOutline.style.display = 'block';
+        
+        // Force initial position
+        const updateCursor = (e) => {
+          const posX = e ? e.clientX : window.innerWidth / 2;
+          const posY = e ? e.clientY : window.innerHeight / 2;
+          
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+          
+          cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+          }, { duration: 500, fill: 'forwards' });
+        };
+        
+        // Initial position
+        updateCursor();
+        
+        // Update on mouse move
+        window.addEventListener('mousemove', updateCursor, { passive: true });
+      }
+    });
+  </script>
 </body>
 </html>

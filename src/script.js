@@ -24,7 +24,12 @@ class App {
     handleNavbarScroll();
     handleMobileNav();
     handleProjectFiltering();
-    handleContactForm();
+    
+    // Only initialize contact form if the contact form exists on the page
+    if (document.querySelector('#contact-form')) {
+      handleContactForm();
+    }
+    
     handleScrollAnimations();
     handleSkillBars();
     handleCustomCursor();
