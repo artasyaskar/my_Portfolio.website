@@ -8,10 +8,22 @@
       }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/:path((?!api/|assets/).*)",
-      "destination": "/index.html"
+      "src": "/projects",
+      "dest": "/projects.html"
+    },
+    {
+      "src": "/index.html",
+      "dest": "/"
+    },
+    {
+      "src": "/(.*)",
+      "status": 200,
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      },
+      "continue": true
     }
   ]
 }
