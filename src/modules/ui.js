@@ -50,9 +50,19 @@ export function handleBackToTop() {
 export function handleSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetElement = document.querySelector(this.getAttribute('href'));
+      const href = (this.getAttribute('href') || '').trim();
+      // Ignore placeholder links and only handle valid in-page anchors
+      if (!href || href === '#') return;
+
+      let targetElement = null;
+      try {
+        targetElement = document.querySelector(href);
+      } catch (err) {
+        targetElement = null;
+      }
+
       if (targetElement) {
+        e.preventDefault();
         targetElement.scrollIntoView({ behavior: 'smooth' });
       }
     });

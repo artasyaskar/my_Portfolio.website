@@ -1,3 +1,8 @@
+.hero-section .hero-title {
+  /* Keep hero name bright on dark hero background in all themes */
+  color: #f9fafb;
+}
+
 /*==================================================
   Global Styles & Variables
 ==================================================*/
@@ -789,6 +794,59 @@ body:hover .cursor-dot, body:hover .cursor-outline {
   margin-top: 4rem;
 }
 
+/* Neon note bubble above 'View All Projects' */
+.note-bubble {
+  width: fit-content;
+  max-width: 90%;
+  margin: 1rem auto 1.5rem;
+  padding: 0.6rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  background: radial-gradient(120% 120% at 10% 10%, rgba(245,158,11,0.15) 0%, rgba(17,24,39,0.6) 40%), rgba(17,24,39,0.8);
+  border: 1px solid rgba(245,158,11,0.45);
+  border-radius: 999px;
+  box-shadow: 0 0 20px rgba(245,158,11,0.35), inset 0 0 12px rgba(245,158,11,0.15);
+  backdrop-filter: blur(6px);
+}
+
+.note-bubble i {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(245,158,11,0.8);
+}
+
+.note-bubble strong {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .note-bubble {
+    font-size: 0.9rem;
+    padding: 0.55rem 0.9rem;
+  }
+}
+
+/* Light theme overrides for better contrast */
+body.light-theme .hero-section .hero-title {
+  color: #0f172a; /* slate-900 for crisp contrast in light theme */
+  text-shadow: 0 2px 10px rgba(124,58,237,0.25);
+}
+
+body.light-theme .note-bubble {
+  color: #111827; /* dark text on light bubble */
+  background: radial-gradient(120% 120% at 10% 10%, rgba(124,58,237,0.12) 0%, rgba(255,255,255,0.9) 40%), #ffffff;
+  border: 1px solid rgba(124,58,237,0.5);
+  box-shadow: 0 0 24px rgba(124,58,237,0.25), 0 4px 18px rgba(17,24,39,0.08);
+}
+
+body.light-theme .note-bubble i,
+body.light-theme .note-bubble strong {
+  color: #7c3aed; /* purple */
+  text-shadow: 0 0 8px rgba(124,58,237,0.5);
+}
+
 /* Projects Page Specific */
 .project-filters {
   display: flex;
@@ -845,6 +903,19 @@ body:hover .cursor-dot, body:hover .cursor-outline {
 
 .project-link:hover i {
   transform: translateX(5px);
+}
+
+/* Project action buttons layout (e.g., View on GitHub + Live Demo) */
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: auto;
+}
+
+.project-actions .project-link {
+  white-space: nowrap;
 }
 
 /*==================================================
