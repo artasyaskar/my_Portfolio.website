@@ -3,6 +3,11 @@
   color: #f9fafb;
 }
 
+/* Hidden state for filtered cards - instant and accessible */
+.project-card.is-hidden {
+  display: none !important;
+}
+
 /*==================================================
   Global Styles & Variables
 ==================================================*/
